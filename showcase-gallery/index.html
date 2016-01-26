@@ -20,7 +20,7 @@
 <link rel='stylesheet' id='fadeinstyles-css'  href='../wp-content/plugins/nextgen-fadein/css/fadein-styles.css?ver=0.0.1' type='text/css' media='screen' />
 <link rel='stylesheet' id='NextGEN-css'  href='../wp-content/plugins/nextgen-gallery/css/nggallery.css?ver=1.0.0' type='text/css' media='screen' />
 <link rel='stylesheet' id='shutter-css'  href='../wp-content/plugins/nextgen-gallery/shutter/shutter-reloaded.css?ver=1.3.0' type='text/css' media='screen' />
-<script type='text/javascript' src='wp-includes/js/jquery/jquery.js?ver=1.3.2'></script>
+
 <script type='text/javascript' src='../wp-content/plugins/nextgen-fadein/js/fadeslideshow.js?ver=2.1'></script>
 <script type='text/javascript' src='../wp-content/plugins/facelift-image-replacement/facelift/flir.js?ver=2.9'></script>
 <script type='text/javascript' src='wp-includes/js/swfobject.js?ver=2.1'></script>
@@ -38,7 +38,7 @@ var shutterSettings = {
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" /> 
 <link rel='index' title='Showcase Landscaping SC' href='http://showcaselandscapingsc.com' />
 <meta name="generator" content="WordPress 2.9" />
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <!-- All in One SEO Pack 1.6.10 by Michael Torbert of Semper Fi Web Design[403,459] -->
 <meta name="description" content="At Showcase Lawn Maintenance & Landscaping, we know how important the appearance of your property is and believe that a professionally landscaped lawn adds" />
 <link rel="canonical" href="showcase-gallery" />
@@ -66,6 +66,8 @@ var shutterSettings = {
 	}
 		
 </style>
+
+<link href="../css/lightbox.min.css" rel="stylesheet" />
 
 </head>
 
@@ -127,36 +129,49 @@ var shutterSettings = {
 
 			<!--<h2>Showcase Gallery</h2>--> <p>At Showcase Lawn Maintenance &#038; Landscaping, we know how important the appearance of your property is and believe that a professionally landscaped lawn adds value and enhances the beauty of your home or business. Because the outside environment is an extension of your property, our goal is to integrate your lifestyle with the style of your home or business. Our expertise extends beyond landscape design/installation, irrigation, outdoor living areas, outdoor lighting, and lawn maintenance. We strive to exceed our client’s expectations by creating an environment that is worth coming home to.<br />
 
-<div class="simpleviewer" id="ngg_simpleviewer7">
-<div class="swfobject" id="so7_1" style="width:465px; height:400px;">
-<p>The <a href="http://www.macromedia.com/go/getflashplayer">Flash Player</a> and <a href="http://www.mozilla.com/firefox/">a browser with Javascript support</a> are needed..</p>
-</div>
-</div>
-<script type="text/javascript" defer="defer">
-var so7_1 = {
-	params : {
-		wmode : "opaque",
-		allowFullScreen : "true",
-		bgcolor : "#CACAA1"},
-	flashvars : {
-		preloaderColor : "0x76774B",
-		langOpenImage : "Open Image in New Window",
-		langAbout : "About",
-		xmlDataPath : "../wp-content/plugins/nextgen-flashviewer/xml/simpleviewer.php?gid=7"},
-	attr : {
-		styleclass : "simpleviewer"},
-	start : function() {
-		swfobject.embedSWF("../wp-content/plugins/nggflash-swf/viewer.swf", "so7_1", "465", "400", "7.0.0", false, this.flashvars, this.params , this.attr );
-	}
-}
-so7_1.start();
-</script></p>
-<p class="gallery_nav"><a href="ba-gallery">{ click to view before and after gallery }</a></p>
+			<div class="row">
+		<a href="img/WebGallery_1.jpg" data-lightbox="roadtrip">
+			<img style="max-width:200px;" src="img/WebGallery_1.jpg" />
+		</a>
+		<a href="img/WebGallery_2.jpg" data-lightbox="roadtrip">
+			<img style="max-width:200px;" src="img/WebGallery_2.jpg" />
+		</a>
+		<a href="img/WebGallery_3.jpg" data-lightbox="roadtrip">
+			<img style="max-width:200px;" src="img/WebGallery_3.jpg" />
+		</a>
 
-						
-			<br/><img class="call_us" src="../wp-content/themes/showcase/images/callus.png" alt="Call Us - Free Estamates!"/>
-			
-		</div></div>
+		<a href="img/WebGallery_4.jpg" data-lightbox="roadtrip">
+			<img style="max-width:200px;" src="img/WebGallery_4.jpg" />
+		</a>
+
+		<a href="img/WebGallery_5.jpg" data-lightbox="roadtrip">
+			<img style="max-width:200px;" src="img/WebGallery_5.jpg" />
+		</a>
+
+		<a href="img/WebGallery_6.jpg" data-lightbox="roadtrip">
+			<img style="max-width:200px;" src="img/WebGallery_6.jpg" />
+		</a>
+
+		<a href="img/WebGallery_7.jpg" data-lightbox="roadtrip">
+			<img style="max-width:200px;" src="img/WebGallery_7.jpg" />
+		</a>
+
+		<a href="img/WebGallery_8.jpg" data-lightbox="roadtrip">
+			<img style="max-width:200px;" src="img/WebGallery_8.jpg" />
+		</a>
+
+		<a href="img/WebGallery_9.jpg" data-lightbox="roadtrip">
+			<img style="max-width:200px;" src="img/WebGallery_9.jpg" />
+		</a>
+
+		<a href="img/WebGallery_10.jpg" data-lightbox="roadtrip">
+			<img style="max-width:200px;" src="img/WebGallery_10.jpg" />
+		</a>
+
+	</div>
+
+
+		</div>
 		
 	</div><!-- close wrapper -->
 
@@ -183,15 +198,7 @@ so7_1.start();
 
 </div><!-- close container -->
 
-<script type="text/javascript">
-FLIR.init({path:'../wp-content/plugins/facelift-image-replacement/facelift/'},new FLIRStyle({mode:'static'}));
-jQuery(function($){
-    $(document).ready(function(){
-    $("h2").each( function() { FLIR.replace(this, new FLIRStyle({mode:'wrap',cFont:'museoslab'}));});
-    $("h3").each( function() { FLIR.replace(this, new FLIRStyle({mode:'wrap',cFont:'museoslab'}));});
-    });
-});
-</script>
 
+	<script  src='../js/lightbox.min.js'></script>
 </body>
 </html>
