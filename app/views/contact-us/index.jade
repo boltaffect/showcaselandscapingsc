@@ -1,0 +1,46 @@
+extends ../../mixins/_layout
+
+include ../../mixins/mixins
+
+mixin form_li(input_name, name, input_id, li_id, input_type, required)
+  li(id=li_id)
+    label(for=input_id)
+      span
+        =name
+    if input_type === 'textarea'
+      textarea(id=input_id, name=input_name, cols="30", rows="8")
+
+    else if input_type === 'text'
+      input(type='text', name=name, id=input_id)
+
+    if required === 'true'
+      span.reqtxt
+        | (required)
+
+block content
+
+  h2
+    | Contact Us Today!
+
+  p
+    | Showcase Lawn Maintenance &amp; Landscaping, LLC
+    br
+    | 3720 Calhoun Memorial Hwy, Greenville, SC 29611
+    br
+    | Mailing Address: PO Box 2807, Easley, SC 29641
+    br
+    | Phone:
+    +phone_number
+    | &nbsp;&#8226;&nbsp; Fax: (844) 274-0812
+    br
+
+  form(enctype="multipart/form-data", action="https://getsimpleform.com/messages?form_api_token=451c921ae0709bc55898a79076f19e53", method="post").cform#cformsform
+    ol.cf-ol
+      +form_li('message', 'Message', 'cf_field_1', 'li--1', 'textarea')
+      +form_li('name', 'Your Name', 'cf_field_2', 'li--2', 'text', 'true')
+      +form_li('email', 'Email', 'cf_field_3', 'li--3', 'text', 'true')
+      +form_li('website', 'Website', 'cf_field_4', 'li--4', 'text', 'true')
+    p.cf-sb
+      input(type='submit', name='sendbutton', id='sendbutton', value='Submit').sendbutton
+
+  +call_for_a_free_estimate

@@ -1,0 +1,25 @@
+extends ../../mixins/_layout
+
+include ../../mixins/mixins
+
+block content
+  h2
+    | Outdoor Lighting
+
+  p
+    | The beauty of your property will be enhanced when viewed in the evening through the addition of
+    | outdoor lighting. This lighting will also add to the safety and security of your home. Showcase can
+    | develop and install a Custom Lighting Design to meet your specific needs.
+
+  p
+    | We utilize custom low voltage lights in all of our designs. These lights are safer, energy efficient,
+    | and produce better lighting. We evaluate your property and discuss the different lighting fixtures
+    | that will add to the beauty of your property.
+
+  p
+    +showcase_image('/images/lighting1.jpg', "Showcase Your Home After the Sun Goes Down")
+    +showcase_image('/images/lighting2.jpg', "Spectacular Effects")
+    +showcase_image('/images/lighting3.jpg', "Outdoor Lighting")
+    +showcase_image('/images/lighting4.jpg', "Enjoy The Outdoors Like Never Before")
+
+  +call_for_a_free_estimate

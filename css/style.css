@@ -1,0 +1,582 @@
+/* @override http://sclands.limeleafllc.com/../wp-content/themes/showcase/style.css */
+
+/*
+Theme Name: Showcase
+Theme URI: http://limeleafllc.com
+Description: This is a custom Zest/Wordpress theme for Showcase Landscaping llc.
+Version: 1.0
+Author: Kirsten Dietz
+Author URI: http://limeleafllc.com/
+
+	Showcase v1.0
+	
+
+	This theme was designed by Katie Searls of King Searls desigs llc
+	http://www.ksdport.com/
+
+	The CSS, XHTML and php built by Dan & Kirsten Dietz of limeleaf llc
+	http://limeleafllc.com/
+
+*/
+
+/* @group STRUCTURE */
+
+body {
+	background: #000 url(../images/bg.jpg) center repeat-y;
+	color: #000;
+	line-height: 1.3em;
+}
+
+#container {
+	width: 800px;
+	margin: 0 auto;
+	background-color: #000;
+	border-left: 1px solid #ffcc66;
+	border-right: 1px solid #ffcc66;
+}
+
+#menu {
+	height: 31px;
+	padding: 15px 0 0 0;
+		
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 0.9em;
+	
+	border-bottom: 1px solid #ffcc66;
+	background: #000 url(../images/menubg.jpg) repeat-x;
+}
+
+#wrapper {
+	float: left;
+	/*background: url(images/header.jpg) no-repeat;*/
+	position: relative;
+	padding-top: 270px;
+	width: 800px;
+	/*height: 340px;*/
+	z-index: 1;
+}
+
+#logo {
+	left:50%;
+	margin:120px 0 0 -180px;
+	z-index:100;
+	position: absolute;
+}
+
+#sidebar {
+	background-color: #000;
+	border: 2px solid #3d3730;
+	width: 242px;
+	float: left;
+	margin: 0 18px;
+	color: #b1b187;
+}
+
+#sidebar ul {
+	margin: 7px 7px 0 7px;
+	padding: 11px 11px 0 11px;
+	
+	border-top: 1px solid #3d3730;
+	border-right: 1px solid #3d3730;
+	border-bottom: 0;
+	border-left: 1px solid #3d3730;
+}
+
+#sidebar #menu-extras{
+	margin: 0 7px 7px 7px;
+	padding: 11px 11px 210px 11px;
+	
+	border-top: 0;
+	border-right: 1px solid #3d3730;
+	border-bottom: 1px solid #3d3730;
+	border-left: 1px solid #3d3730;
+	
+	background: url(../images/servicesbg.jpg) no-repeat bottom;
+}
+
+.pageoutter {
+	float: left;
+	width: 500px;
+	padding-bottom: 7px;
+}
+
+#footer {
+	background: url(../images/footerbg.jpg) repeat-x;
+	height: 35px;
+	margin: -30px 0 0 0;
+	border-top: 1px solid #ffcc66;
+	padding: 35px 0 0 0;
+	z-index: 0;
+	position: relative;
+	color: #b1b187;
+	font-size: .75em;
+	line-height: 1.4em;
+	text-align: center;
+}
+
+#footer .wrapper {
+	float: left;
+}
+
+.spacer {
+	clear: both;
+}
+
+/* @end */
+
+/* @group TYPE SIZES */
+
+BODY {font: 0.9em "Lucida Grande", Lucida, Verdana, sans-serif;}
+
+H1 {font-size:2em}  /* displayed at 24px */
+H2 {font-size:1.1em}  /* displayed at 18px */
+H3 {font-size:1.25em}  /* displayed at 15px */
+H4 {font-size:1em}  /* displayed at 12px */
+
+INPUT, SELECT, TH, TD {font-size:1em}
+LI LI, LI P, TD P, BLOCKQUOTE P {font-size:1em}
+
+#sidebar ul {font-size: 0.8em;}
+
+.module h3 {font-size: 1.5em; }
+
+/* @end */
+
+
+/* @group HEADERS */
+
+h1 {
+	display: none;
+}
+
+h2 {
+	/*font-size: 1.6em;*/
+	font-size: 1.3em;
+	text-transform: uppercase;
+	color: #090906;
+	margin: 10px 0 20px 0;
+	text-align: center;
+}
+
+h3 {
+	/*font-size: 1.2em;*/
+	text-transform: uppercase;
+	margin: 20px 0;
+}
+
+h4{
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+#sidebar h2 {
+	color: #b1b187;
+	text-align: center;
+	margin: 10px 0 15px 0;
+}
+
+#sidebar h3 {
+	margin-left: 17px;
+}
+
+.module h3 {
+	text-transform: none;
+	color: #000;
+}
+
+.ngg-albumoverview h3 { 
+	margin: 15px 0 10px 0; 
+	padding: 0; 
+}
+
+/* @end */
+
+
+
+
+/* @group MENUS */
+#sidebar h3#sidebar-header{
+	text-align: center;
+	margin-left: 0px;
+}
+
+#services h3 {
+	font-size: 15px;
+}
+ul#services{
+	width: 215px;
+	padding: 7px 0 0 11px;
+	margin: 0 0 0 7px;
+}
+
+ul#services li {
+	list-style-type: disc;
+	list-style-position: inside;
+	text-transform: uppercase;
+	height: 31px;
+	padding: 0 0 0 15px;
+	margin: 0 7px 0 0;
+	line-height: 31px;
+	background: url(../images/menuitembg.jpg);
+	border-bottom: 1px solid #b1b187;
+	width: 190px;
+}
+
+ul#services li.current,
+ul#services li.current a{
+	font-weight: bold;
+	color: #fff;
+}
+
+ul#services li a:hover {
+	color: #fff;
+}
+
+#menu a { color: #fff; }
+
+#menu a.current {
+	text-decoration: underline;
+	color: #b1b187;
+	font-weight: bold;
+}
+
+#menu a:hover {
+	text-decoration: underline;
+	color: #b1b187;
+}
+
+/* @end */
+
+
+/* @group PAGE AND POST TAGS */
+
+#sidebar p {
+	margin-left: 17px;
+}
+
+#sidebar .readmore {
+	text-align: right;
+}
+
+.pageoutter {
+	background: url(../images/pagebg1.jpg) center;
+	border: 2px solid #000;
+}
+
+.page {
+	background: url(../images/pagebg2.jpg);
+	margin: 7px 7px 0 7px;
+	border: 1px solid #000;
+	padding: 11px 20px;
+	float: left;
+	width: 442px;
+	min-height: 605px;
+}
+
+.page img {
+	border: 1px solid #000;
+}
+
+.page ul,
+.page ul.alignleft,
+.page ul.alignright{
+	list-style-type: disc;
+	padding: 0 0 0 15px;
+	margin: 0 0 0 5px;
+	font-size: 13px;
+}
+
+.page em{
+	font-style: italic;
+	font-family: sans-serif;
+}
+
+.page img.call_us{
+	position:relative;
+	left:-190px;
+	margin:10px 0 0 50%;
+	border: none;
+}
+
+.simpleviewer{ margin-left: -5px; }
+
+/* @end */
+
+/* @group HOME PAGE MODULES */
+
+#module_container{ float:left; margin:0 0 0 -20px; width:480px; padding: 0;}
+.module {
+	float: left;
+	width: 215px;
+	height: 215px;
+	padding: 5px;
+	
+	color: #377100;
+	text-align: center;
+	
+	border: 1px dashed #000;
+	background: transparent;
+}
+.page .module img.alignleft { margin: 0 2px; padding: 0px; }
+
+.module a { color: #000; text-decoration: underline; }
+.module.module-left{ margin: 0 5px 0 10px; }
+
+.module .inner-module:hover { background: url(../images/modulebg_hover.jpg);	}
+.module .inner-module{ float: left;	width: 100%; height: 100%; border: 1px solid #000; background: url(../images/modulebg.jpg); font-size: 1.1em; }
+.module .inner-module p{ font-size: 1.0em; }
+
+#module-59 h3	{ margin: 10px 0px 5px 0px;}
+#module-137	h3	{ margin-top: 60px; }
+#module-38		{ background:url(../images/monthlyspecial.png) bottom no-repeat; }
+
+
+/* @end */
+
+
+/* @group HOME PAGE ALBUM */
+
+div.ngg-albumoverview{ position: relative; width:100%; height:85px; margin-left: 0px; }
+
+div.ngg-albumoverview div.ngg-album{
+	float: left;
+	width: 100px;
+	height: 75px;
+	margin: 0;
+	padding: 3px;
+	border: none;
+}
+
+.ngg-clear,
+.ngg-albumtitle,
+.ngg-description{ display: none; }
+div.ngg-thumbnail{ float: none; margin-right: 2px; padding: 0; }
+div.ngg-thumbnail img.Thumb{ margin: 0; padding: 0; border: 1px solid #000; width: 100px; }
+
+/* @end */
+
+/* @group CONTACT FORM */
+
+.cf-ol label {
+	
+	width: 100px;
+	color: #000;
+	clear: both;
+}
+
+.fldrequired{
+	border-right: 2px red solid;
+}
+
+.failure {
+	color: red;
+	font-size: 0.9em;
+	text-align: center;
+}
+
+.reqtxt,
+.emailreqtxt {
+	display: block;
+	font-size: 0.7em;
+	padding: 0;
+	margin: -8px 0 0 105px;
+}
+
+.sendbutton{
+	margin: 0 0 0 105px;
+}
+
+.success{
+	font-size: 1.1em; 
+	text-align: center; 
+	font-weight:bold;
+}
+
+/* @end */
+
+
+/* @group OTHER */
+
+#footer p {
+	margin: 0;
+	padding: 0;
+}
+
+#footer .columnone {
+	float: left;
+	width: 286px;
+}
+
+#footer .columntwo {
+	float: left;
+	width: 500px;
+}
+
+/* @end */
+
+/* @group GENERAL TAGS */
+
+img {
+	border: 0px;
+}
+
+p {
+	margin: 0 0 10px 0;
+	padding-bottom: 10px;
+	line-height: 1.1em;
+	font: 0.9em "Lucida Grande", Lucida, Verdana, sans-serif;
+}
+
+.center {
+	text-align: center;
+	}
+
+.hidden {
+	display: none;
+	}
+
+hr {
+	display: none;
+}
+
+a { color: #b1b187; }
+a img { border: none; }
+a.post-edit-link { color:red; clear:both; color:red; float:left; }
+
+img.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.page img.alignright {
+	margin: 3px;
+}
+
+.page img.alignleft {
+	margin: 3px;
+}
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignright {
+	float: right;
+}
+
+.alignleft {
+	float: left;
+}
+
+/* @end */
+
+/* @group FORM TAGS */
+
+label {
+	position: relative;
+	float: left;
+	width: 120px;
+	text-align: right;
+	padding: 8px 5px 8px 0;
+	clear: left;
+}
+
+input, button {
+	border: 1px solid #777;
+	background-color: white;
+	margin: 5px 0;
+	padding: 3px;
+	color: #7e7e7e;
+}
+
+input#searchsubmit {
+	margin-left: 50px;
+}
+
+textarea {
+	border: 1px solid #777;
+}
+
+.alt {
+	background-color: #f8f8f8;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	margin: 0;
+	padding: 10px;
+}
+
+.linklove{
+	display: none;
+}
+
+.commentlist {
+	padding: 0;
+	text-align: justify;
+}
+
+.commentlist li {
+	margin: 15px 0 3px;
+	padding: 5px 10px 3px;
+	list-style: none;
+}
+
+.commentlist p {
+	margin: 10px 5px 10px 0;
+}
+
+#commentform p {
+	margin: 5px 0;
+}
+
+.nocomments {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+.commentmetadata {
+	margin: 0;
+	display: block;
+}
+
+.commentlist cite, .commentlist cite a {
+	font-weight: bold;
+	font-style: normal;
+}
+
+#commentform p {
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+}
+
+h3#comments {
+	margin: 25px 0 0 0;
+}
+
+h3#respond {
+	margin: 25px 0 0 0;
+}
+
+form#searchform {
+	margin: 25px 0 0 0;
+}
+
+/* @end */
+
+
+.page p.gallery_nav {
+	font-weight: bold;
+	text-align: center;
+	font-size: 1.1em;
+	margin: 20px 0 0 0;
+}
+
+.page p.gallery_nav a {
+	color: #b13600;
+}

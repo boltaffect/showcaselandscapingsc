@@ -1,0 +1,49 @@
+extends ../../mixins/_layout
+
+include ../../mixins/mixins
+
+block content
+  h2
+    | Landscape Design &#038; Installation
+
+  p
+    | At Showcase, we enjoy what we do, and that is the motivation behind each project. As one of the top
+    | landscaping companies in the Upstate of South Carolina, we have a wealth of knowledge in designs,
+    | construction, landscape installation and the attention to detail. We take our clients ideas and
+    | combine them with ours to create a curbside appeal that adds value to the property.
+
+  h4
+    | Landscape Services:
+
+  table
+    tr
+      td
+        ul.alignleft
+          li Landscape Design
+          li Plant &#038; Tree Installation
+          li Installation of Sod
+          li Grading
+          li Retaining Walls
+          li Walk Paths
+          li Irrigation
+          li Outdoor Living Areas
+
+      td
+        ul.alignleft
+          li Renovation of Existing Landscapes
+          li Woodland Cleanup
+          li Water Features
+          li Hydro-Seeding
+          li Stonework
+          li Brick Pavers
+          li Drainwork
+          li And much more&#8230;
+
+    tr
+      td
+          +showcase_image('/images/landscaping1.jpg', 'Landscape Design - Retaining Walls')
+
+      td
+        +showcase_image('/images/landscaping2.jpg', 'Landscape Design - Plant and Tree Installation')
+
+  +call_for_a_free_estimate

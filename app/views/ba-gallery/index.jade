@@ -1,0 +1,18 @@
+extends ../../mixins/_layout
+
+include ../../mixins/mixins
+
+mixin image_list()
+  - var img_list = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']
+
+  for item in img_list
+
+    - var img_url = 'img/' + item + '.jpg'
+
+    a(href=img_url, data-lightbox="roadtrip")
+      img(src=img_url, style="max-width:200px;")
+
+
+block content
+  .row
+    +image_list

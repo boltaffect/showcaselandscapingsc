@@ -1,0 +1,43 @@
+extends ../../mixins/_layout
+
+include ../../mixins/mixins
+
+block content
+  h2
+    | Lawn Maintenance Services
+
+  p
+    | The landscaping of your property complements your lifestyle and works as an accent to the
+    | architecture of your home or business. At Showcase, our Lawn Maintenance Program is customized
+    | according to the specific needs of each client. Because we are on-site for 52 weeks per year, you
+    | will be able to enjoy the greater beauty and detail in your landscape throughout the year.
+
+  p
+    | Showcase believes in quality and professional service. Our staff will treat your property in the most
+    | professional way. Under the regular care of our professional horticultural staff, your gardens and
+    | landscape will look immaculate year around.
+
+  h4
+    | Lawn Maintenance Program:
+
+  table(style="margin-top:10px;")
+    tbody
+      tr
+        td
+          ul
+            li Lawn Maintenance <em>(Weekly, Bi-Weekly or Monthly)</em>
+            li Aeration &amp; Seeding
+            li Pruning
+            li Fertilization
+            li Mulching
+            li Perennials &amp; Ornamental Grass
+            li Leaf Removal
+            li Bed Edging
+            li Landscape Lighting
+            li Inspections
+            li Irrigation Inspections
+
+        td
+          img(src='/images/lawn.jpg', width="297", height="205", title="A beautiful lawn you'll love year round.", alt='Lawn Maintenance Done Right').alignright.size-full
+
+  +call_for_a_free_estimate

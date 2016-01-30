@@ -1,0 +1,62 @@
+mixin top_menu_top()
+  #menu
+    a(href='/')
+      | Home
+    | &nbsp;&nbsp;&nbsp;&nbsp;&#8226;&nbsp;&nbsp;&nbsp;&nbsp;
+    a(href='/about/')
+      | About Us
+    | &nbsp;&nbsp;&nbsp;&nbsp;&#8226;&nbsp;&nbsp;&nbsp;&nbsp;
+    a(href='/about/')
+      | Free Estimates &amp; Consultations
+    | &nbsp;&nbsp;&nbsp;&nbsp;&#8226;&nbsp;&nbsp;&nbsp;&nbsp;
+    a(href='/contact-us/')
+      | Contact Us
+
+
+mixin main_menu()
+
+  -
+    var menu = {
+      'Lawn Maintenance': '/lawn-maintenance-services/',
+      'Landscaping': '/landscape-design-installation/',
+      'Irrigation': '/irrigation/',
+      'Outdoor Lighting': '/outdoor-lighting/',
+      'Outdoor Living': '/outdoor-living-areas/',
+      'Tree Services': '/tree-services/',
+      'Gallery': '/showcase-gallery/',
+      'Before & After': '/ba-gallery/'
+    }
+
+  ul#services
+    for val, index in menu
+      li
+        a(href=val)
+          =index
+
+
+mixin ngg_album(title, image_src)
+  .ngg-album
+    .ngg-albumtitle
+      a(href='/showcase-gallery/')
+        |=title
+
+    .ngg-albumcontent
+      .ngg-thumbnail
+        a(href='/showcase-gallery/')
+          img(src=image_src).Thumb
+
+
+mixin phone_number()
+  a(href='tel:8644493007')
+    | (864) 449-3007
+
+
+mixin showcase_image(img_src, title)
+  img(src=img_src, alt=title, title=title).lignleft.size-full
+
+
+mixin call_for_a_free_estimate()
+  p
+    | Call Us Today For A Free Estimate
+    br
+    +phone_number

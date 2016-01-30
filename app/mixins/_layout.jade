@@ -1,0 +1,110 @@
+doctype transitional
+include mixins
+
+html(xmlns="http://www.w3.org/1999/xhtml", dir="ltr", lang="en-US")
+
+  head(profile="http://gmpg.org/xfn/11")
+    meta(http-equiv="Content-Type", content="text/html; charset=UTF-8")
+    meta(name="google-site-verification", content="pNGMzymNMhosvVLom8klR9NQzmwDxKz8FYVqd96fpA8")
+
+    block title
+      title
+        | Showcase Landscaping SC
+
+    link(rel="stylesheet", href="/css/resets.css", type="text/css", media="screen")
+    link(rel="stylesheet", href="/css/style.css", type="text/css", media="screen")
+
+    <!--[if IE 6]>
+    link(rel="stylesheet", href="/css/ie6.0.3.css", type="text/css", media="screen")
+    <![endif]-->
+
+    link(rel="stylesheet", href="/css/fadein-styles.css", type="text/css", media="screen")
+    link(rel="stylesheet", href="/css/nggallery.css", type="text/css", media="screen")
+    link(rel="stylesheet", href="/css/shutter-reloaded.css", type="text/css", media="screen")
+    link(rel="stylesheet", href="/css/lightbox.min.css", type="text/css", media="screen")
+
+    script(type='text/javascript', src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js")
+    script(type='text/javascript', src="/js/fadeslideshow.js")
+    script(type='text/javascript', src="/js/flir.js")
+
+    script(type='text/javascript').
+      var shutterSettings = {
+        msgLoading: "L O A D I N G",
+        msgClose: "Click to Close",
+        imageCount: "1"
+      };
+
+    script(type='text/javascript', src="/js/shutter-reloaded.js")
+
+    link(rel='index', title='Showcase Landscaping SC', href='http://showcaselandscapingsc.com')
+
+    style(type='text/css').
+      #wrapper {
+        background: transparent url(/images/banner1.jpg) no-repeat scroll 0 0;
+      }
+
+      .module {
+        border: none;
+      }
+
+  body
+
+    #container
+
+      block menu
+        +top_menu_top()
+
+      img(src='/images/logo.png', alt="Showcase Lawn Maintenance &amp; Landscaping LLC")#logo
+
+      #wrapper
+        <!--[if IE]>
+        style.
+          ul#services li {
+            list-style-type: none;
+          }
+
+          ul#services li {
+            margin-left: -15px;
+          }
+        <![endif]-->
+
+        #sidebar
+          h3#sidebar-header
+            | Services Menu
+
+          +main_menu()
+
+          #menu-extras
+            h3
+              | Contact Us
+
+            p
+              | You can reach us by email, phone or fax. We look forward to hearing from you.
+
+            p.readmore
+              a(href='/contact-us/')
+                | more &raquo
+
+        .pageoutter
+          .page
+            block content
+
+        .spacer
+
+        #footer
+          .wrapper
+            .columnone
+              p
+                | &copy; Showcase Lawn Maintenance
+                br
+                | &amp; Landscaping LLC
+
+            .columntwo
+              p
+                | 3720 Calhoun Memorial Hwy, Greenville, SC 29611
+                br
+                | Phone:
+                +phone_number
+                | &nbsp;&#8226;&nbsp; Fax: (844) 274-0812
+
+    script(type='text/javascript', src='/js/lightbox.min.js')

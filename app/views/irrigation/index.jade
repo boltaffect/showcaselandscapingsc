@@ -1,0 +1,43 @@
+extends ../../mixins/_layout
+
+include ../../mixins/mixins
+
+block content
+  h2
+    | Irrigation
+
+  p
+    | Showcase can provide you with an irrigation system that is right for your property. When visiting
+    | your property, we will evaluate for the most efficient irrigation system. At Showcase, we understand
+    | the importance of having an irrigation system to maintain your landscaped areas. We also understand
+    | the importance of conserving water and can create a system that will utilize various components to
+    | assist in the conservation of water while keeping your property lush and green.
+
+  p
+    | We have knowledge in selecting the products that will address your needs. From small drip systems to
+    | complex underground sprinkler systems, our design will give the right amount of water to your trees
+    | and plant material.
+
+  p
+    | We can also evaluate your existing irrigation system. An older system can use up to 40% more water
+    | than the new systems. These newer systems can reduce your water usage while increasing the water
+    | coverage.
+
+  h4
+    | Irrigation Services:
+
+  table(style="margin-top:10px;")
+    tr
+      td
+        ul
+          li Evaluation of Property for Proper Water Coverage
+          li Installation <em>(New or Existing Systems)</em>
+          li Installation of Drip Systems
+          li Installation of Clocks
+          li Installation of Rain Sensors
+          li Irrigation Repairs
+          li Replacement Parts
+      td
+        +showcase_image('/images/irrigation.jpg', 'Complete Irrigation Systems')
+
+  +call_for_a_free_estimate
