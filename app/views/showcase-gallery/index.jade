@@ -10,7 +10,7 @@ mixin image_list()
     - var img_url = 'img/' + item + '.jpg'
     - var thumb_img_url = 'img/thumb/' + item + '.jpg'
 
-    a(href=img_url, data-lightbox="roadtrip", style='margin-right:5px;margin-bottom:5px;').thumb_image
+    a(href=img_url, data-lightbox="roadtrip", style='margin-right:5px;margin-bottom:5px;float:left;').thumb_image
       img(src=thumb_img_url, style="max-width:100%")
 
 block content
