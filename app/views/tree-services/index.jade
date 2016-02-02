@@ -4,29 +4,48 @@ include ../../mixins/mixins
 
 block content
 
-  h2
-    | Residential & Commercial Services
+  div
+    img(src='/images/STS_Logo.png', style='border:none;float:left;')
+
+    h3(style='float:left;margin-top:100px;')
+      | Showcase Tree Services, LLC
+  .clearfix(style='clear:both;')
+  div
+    h2
+      | Residential & Commercial Services
+
+  table(style="margin-top:10px;")
+    tbody
+      tr
+        td
+
+          ul
+            li Tree Pruning
+            li Tree Trimming
+            li Tree Removal
+            li Safety Pruning
+            li Stump Grinding & Removal
+            li Lot Clearing
+            li Debris Removal
+            li Insurance Appraisals
+            li And Much More....
+        td
+          img(src='/images/tree.png')
+
+  br
+  p
+    | We Service the Upstate of South Carolina.
+    br
+    | Call Today: &nbsp;
+    +phone_number
 
   p
     | Get a free estimate. We promise to offer competitive
     | pricing along with providing a safe and professional
     | environment.
+    br
+    |We are a licensed and insured company.
 
-    ul
-      li Tree Pruning
-      li Tree Trimming
-      li Tree Removal
-      li Safety Pruning
-      li Stump Grinding & Removal
-      li Lot Clearing
-      li Debris Removal
-      li Insurance Appraisals
-      li And Much More....
 
-  p
-    | We are a licensed and insured company.
-
-  p
-    | We Service the Upstate of South Carolina.
 
   +call_for_a_free_estimate

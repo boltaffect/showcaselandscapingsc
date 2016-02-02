@@ -21,7 +21,9 @@
 
 #### Serving files locally
 
-    grunt serve
+Running the following command will run the default task which starts a server and watches for jade file changes.
+
+    grunt
 
 
 #### Project Files
