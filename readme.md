@@ -36,10 +36,12 @@ dependencies only — they are never shipped to the site — so leave them as-is
 
 #### 4. Serving files locally
 
-    grunt serve  # http://localhost:8001
+    grunt        # default task: serves http://localhost:8001 and recompiles Jade on change
 
-To only preview the already-built site without the toolchain, serve the repo root with any
-static server, e.g. `python3 -m http.server 8001`.
+`grunt` with no arguments runs the default task (`connect` + `watch`): it serves the repo root
+and rebuilds the HTML whenever a `.jade` file changes. Use `grunt jade` to compile once without
+serving. To preview the already-built site without the toolchain at all, serve the repo root with
+any static server, e.g. `python3 -m http.server 8001`.
 
 
 ### Project Files

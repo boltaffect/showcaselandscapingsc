@@ -1,9 +1,12 @@
 module.exports = function(grunt) {
 
     grunt.initConfig({
-		serve: {
-			options: {
-				port: 8001
+		connect: {
+			server: {
+				options: {
+					port: 8001,
+					base: '.'
+				}
 			}
 		},
 
@@ -21,12 +24,23 @@ module.exports = function(grunt) {
 				  ext: ".html"
 				} ]
 			}
+		},
+
+		watch: {
+			html: {
+				files: 'app/**/*.jade',
+				tasks: ['jade:compile'],
+			}
 		}
 
 
 
 	});
 
-    grunt.loadNpmTasks('grunt-serve');
+    grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-jade');
+	grunt.loadNpmTasks('grunt-contrib-watch');
+
+	grunt.registerTask('default', ['connect:server', 'watch']);
+
 };
