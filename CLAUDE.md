@@ -17,15 +17,16 @@ installed globally. With that in place:
 nvm use          # selects Node 8.17.0 from .nvmrc (run in each new shell)
 npm install      # install Grunt + plugins (uses the bundled npm 6)
 grunt jade       # compile app/views/**/*.jade -> HTML at the repo root
-grunt serve      # serve the repo root on http://localhost:8001
+grunt            # default task: serve http://localhost:8001 + watch/recompile jade
 ```
 
 To just preview the already-built site without the toolchain, serve the repo root with any
 static server, e.g. `python3 -m http.server 8001` (paths are absolute, so don't open via `file://`).
 
-`jade` and `serve` are the only registered Grunt tasks. `jshint`, `nodeunit`, and `uglify`
-appear in `devDependencies` but are not wired into the Gruntfile — there is no lint or test
-step in this project.
+The registered Grunt tasks are `jade` (compile), `connect` (static server), `watch`, and the
+default task (`connect` + `watch`, run via bare `grunt`). `jshint`, `nodeunit`, and `uglify` are
+in `devDependencies` but unused — there is no lint or test step. A `Makefile` wraps the common
+commands: `make build`, `make serve`, `make deploy` (see Deploying).
 
 ## Critical workflow: source vs. generated output
 
@@ -41,6 +42,15 @@ The `grunt jade` task maps each source file relative to `app/views/` onto the re
 `app/views/index.jade` → `index.html`, `app/views/about/index.jade` → `about/index.html`, etc.
 Output uses `pretty: false`, so generated HTML is single-line/minified — don't try to read diffs
 of it; reason about the `.jade` instead.
+
+## Deploying
+
+The live site (showcaselandscapingsc.com) is GitHub Pages serving the **`gh-pages`** branch at
+its root, with `master` as the source of truth and `gh-pages` a fast-forwarded mirror. Publish
+with **`make deploy`** from a clean `master`: it recompiles, refuses to run on uncommitted or
+stale HTML, pushes `master`, then fast-forwards `gh-pages`. Make changes on `master` and deploy —
+**never commit directly on `gh-pages`** (that recreates the master/gh-pages divergence that was
+reconciled in the convergence merge).
 
 ## Architecture
 

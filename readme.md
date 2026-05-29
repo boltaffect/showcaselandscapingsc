@@ -49,3 +49,18 @@ any static server, e.g. `python3 -m http.server 8001`.
 The main project files are under the `app/views` folder. Some common files are used/imported
 from the `app/mixins` folder. After editing any `.jade` file, run `grunt jade` and commit the
 regenerated `.html` alongside it — the root-level HTML files are what gets deployed.
+
+
+### Deploying to production
+
+The live site (showcaselandscapingsc.com) is GitHub Pages serving the **`gh-pages`** branch at
+its root. `master` is the source of truth; `gh-pages` is kept as a fast-forwarded mirror of it.
+To publish the committed state of `master`:
+
+    nvm use
+    make deploy
+
+`make deploy` recompiles the HTML, refuses to run if you have uncommitted changes or stale
+generated HTML, pushes `master`, then fast-forwards `gh-pages` to match. GitHub Pages rebuilds
+within about a minute. Commit your work (including the regenerated HTML from `grunt jade`) before
+deploying, and make changes on `master` — never commit directly on `gh-pages`.
